@@ -1179,3 +1179,6 @@
 2024-08-19T14:26:27.049+04:00  INFO 19924 --- [User] [http-nio-8080-exec-3] c.users.demo.loggingAop.LoggingAspect    : Method execution completed: UserController.getUserById() - Returned: <302 FOUND Found,User(id=1, username=Rammo, password=DipakBohara, active=false),[]>
 2024-08-19T14:26:28.286+04:00  INFO 19924 --- [User] [http-nio-8080-exec-4] c.users.demo.loggingAop.LoggingAspect    : Method execution started: UserController.getUserById() with arguments: [1]
 2024-08-19T14:26:28.322+04:00  INFO 19924 --- [User] [http-nio-8080-exec-4] c.users.demo.loggingAop.LoggingAspect    : Method execution completed: UserController.getUserById() - Returned: <302 FOUND Found,User(id=1, username=Rammo, password=DipakBohara, active=false),[]>
+2024-08-19T14:41:38.275+04:00  INFO 19924 --- [User] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-19T14:41:38.282+04:00  INFO 19924 --- [User] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-19T14:41:38.292+04:00  INFO 19924 --- [User] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
