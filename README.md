@@ -42,7 +42,6 @@ This is a simple yet comprehensive CRUD (Create, Read, Update, Delete) applicati
 
 ```shell
 $ git clone https://github.com/your-username/user-management-system.git
-cd user-management-system
 ```
 
 2. Build the project using Maven:
