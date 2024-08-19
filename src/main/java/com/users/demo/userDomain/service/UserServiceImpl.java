@@ -5,6 +5,9 @@ import com.users.demo.userDomain.entity.User;
 import com.users.demo.userDomain.repo.UserRepositry;
 import com.users.demo.userDomain.userVo.UserResponseVo;
 import lombok.RequiredArgsConstructor;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -28,16 +31,19 @@ public class UserServiceImpl implements UserService{
 
 
     @Override
+    @Cacheable(value = "usersCache", key = "#id")
     public User getUserById(Long id) {
         return userRepository.findById(id).orElseThrow(()-> new UserNotFoundException("User not found with id "+ id));
     }
 
     @Override
+    @CachePut(value = "usersCache", key = "#user.id")
     public User createUser(User user) {
         return userRepository.save(user);
     }
 
     @Override
+    @CachePut(value = "usersCache", key = "#id")
     public User updateUser(Long id, User updatedUser) {
         return userRepository.findById(id)
                 .map(userItem -> {
@@ -50,6 +56,7 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    @CacheEvict(value = "usersCache", key = "#id")
     public void deleteUser(Long id) {
         if(userRepository.findById(id).isEmpty()){
             throw new UserNotFoundException(" User not Found With Id "+ id +" For Delete Operation");

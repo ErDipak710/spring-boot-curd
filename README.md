@@ -2,12 +2,12 @@
 
 # User Management System
 
-This is a simple yet comprehensive CRUD (Create, Read, Update, Delete) application for managing users. The application is built using the latest version of Spring Boot and provides a RESTful API for interacting with user data. It is designed with robust features such as user search, pagination, validation, exception handling, logging using Aspect-Oriented Programming (AOP), and more. The application also supports CORS configuration and includes API documentation with OpenAPI (Swagger UI).
+This is a simple yet comprehensive CRUD (Create, Read, Update, Delete) application for managing users. The application is built using the latest version of Spring Boot ,spring cache and provides a RESTful API for interacting with user data. It is designed with robust features such as user search, pagination, validation, exception handling, logging using Aspect-Oriented Programming (AOP), and more. The application also supports CORS configuration and includes API documentation with OpenAPI (Swagger UI).
 
 
 ### Features
 
-1. Basic and advanced CRUD operations using the latest Spring Boot framework.
+1. Basic and advanced CRUD operations using the latest Spring Boot framework and Spring Cache.
 2. Search users by different fields such as username, password, or active status.
 3. Pagination and pagination validation for handling large data sets.
 4. Logging using Aspect-Oriented Programming (AOP) for better traceability and debugging.
@@ -26,9 +26,10 @@ This is a simple yet comprehensive CRUD (Create, Read, Update, Delete) applicati
 4. Spring Boot Starter Data JPA
 5. Spring Boot Starter Actuator
 6. Spring Boot Starter Validation
-7. H2 Database
-8. Lombok
-9. Springdoc OpenAPI 2.2.0
+7. Spring Cache
+8. H2 Database
+9. Lombok
+10. Springdoc OpenAPI 2.2.0
 
 ### Prerequisites
 
