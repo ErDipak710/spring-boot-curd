@@ -41,7 +41,7 @@ This is a simple yet comprehensive CRUD (Create, Read, Update, Delete) applicati
 1. Clone the repository:
 
 ```shell
-$ git clone https://github.com/your-username/user-management-system.git
+$ git clone https://github.com/ErDipak710/spring-boot-curd
 ```
 
 2. Build the project using Maven:
